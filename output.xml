@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-16T13:27:07.821045" rpa="false" schemaversion="5">
+<suite id="s1" name="AppiumRobotSwagLab" source="C:\Users\Leena\PycharmProjects\AppiumRobotSwagLab">
+<suite id="s1-s1" name="Tests" source="C:\Users\Leena\PycharmProjects\AppiumRobotSwagLab\Tests">
+<suite id="s1-s1-s1" name="Test" source="C:\Users\Leena\PycharmProjects\AppiumRobotSwagLab\Tests\Test.robot">
+<test id="s1-s1-s1-t1" name="Unsuccessful login" line="20">
+<kw name="Open Test Application" owner="Keywords">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-01-16T13:27:07.981788" elapsed="5.080838"/>
+</kw>
+<status status="PASS" start="2025-01-16T13:27:07.981328" elapsed="5.081435"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-16T13:27:14.326762" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Username"]</msg>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-16T13:27:13.063288" elapsed="1.263565"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-16T13:27:14.328961" level="INFO">Typing text 'Leena' into text field '//android.widget.EditText[@content-desc="test-Username"]'</msg>
+<msg time="2025-01-16T13:27:14.911452" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Username"]</msg>
+<arg>${USERNAME_LOCATOR}</arg>
+<arg>${INVALID_USER}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-16T13:27:14.327215" elapsed="0.584305"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-16T13:27:15.441804" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Password"]</msg>
+<arg>${PASSWOR_LOCATOR}</arg>
+<arg>10 second</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-16T13:27:14.912452" elapsed="0.529426"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-16T13:27:15.443212" level="INFO">Typing text 'Leena1234' into text field '//android.widget.EditText[@content-desc="test-Password"]'</msg>
+<msg time="2025-01-16T13:27:16.120328" level="INFO">xpath criteria: //android.widget.EditText[@content-desc="test-Password"]</msg>
+<arg>${PASSWOR_LOCATOR}</arg>
+<arg>${INVALID_PASS}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-16T13:27:15.442212" elapsed="0.678221"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-16T13:27:16.664866" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="test-LOGIN"]</msg>
+<arg>${BTNLOGIN_LOCATOR}</arg>
+<arg>10 seconds</arg>
+<arg>locator wasnt displayed</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-16T13:27:16.121713" elapsed="0.543216"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-16T13:27:16.666165" level="INFO">Clicking element '//android.view.ViewGroup[@content-desc="test-LOGIN"]'.</msg>
+<msg time="2025-01-16T13:27:16.756307" level="INFO">xpath criteria: //android.view.ViewGroup[@content-desc="test-LOGIN"]</msg>
+<arg>${BTNLOGIN_LOCATOR}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-16T13:27:16.665269" elapsed="0.091110"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-16T13:27:17.380530" level="INFO">xpath criteria: //android.widget.TextView[@text="Username and password do not match any user in this service."]</msg>
+<arg>${ERROR_MSG}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-16T13:27:16.756729" elapsed="0.623879"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-01-16T13:27:17.381636" elapsed="0.299511"/>
+</kw>
+<status status="PASS" start="2025-01-16T13:27:07.980878" elapsed="9.700788"/>
+</test>
+<status status="PASS" start="2025-01-16T13:27:07.842262" elapsed="9.840301"/>
+</suite>
+<status status="PASS" start="2025-01-16T13:27:07.841589" elapsed="9.842017"/>
+</suite>
+<status status="PASS" start="2025-01-16T13:27:07.821928" elapsed="9.862666"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="AppiumRobotSwagLab" id="s1" pass="1" fail="0" skip="0">AppiumRobotSwagLab</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">AppiumRobotSwagLab.Tests</stat>
+<stat name="Test" id="s1-s1-s1" pass="1" fail="0" skip="0">AppiumRobotSwagLab.Tests.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
